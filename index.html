@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EcoLife | Green & Clean Technology</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar">
+        <div class="logo">
+            🌱 <span>EcoLife</span>
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#calculator">Carbon</a>
+            <a href="#waste">Waste Guide</a>
+            <a href="#tips">Green Tips</a>
+            <a href="#challenges">Challenges</a>
+        </nav>
+
+        <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    </header>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <span class="badge">🌍 Build a Greener Future</span>
+
+            <h1>
+                Small Actions.
+                <span>Big Impact.</span>
+            </h1>
+
+            <p>
+                Green & Clean Technology helps you understand your environmental
+                impact and take simple steps towards a cleaner and healthier planet.
+            </p>
+
+            <div class="hero-buttons">
+                <a href="#calculator" class="btn primary">
+                    Calculate Your Impact →
+                </a>
+
+                <a href="#tips" class="btn secondary">
+                    Explore Green Tips
+                </a>
+            </div>
+
+        </div>
+
+        <div class="hero-visual">
+            <div class="earth">
+                🌍
+            </div>
+
+            <div class="floating-card card-one">
+                ♻️ <strong>Reduce Waste</strong>
+            </div>
+
+            <div class="floating-card card-two">
+                🌱 <strong>Grow Green</strong>
+            </div>
+
+            <div class="floating-card card-three">
+                💧 <strong>Save Water</strong>
+            </div>
+        </div>
+
+    </section>
+
+
+    <!-- Statistics -->
+    <section class="stats">
+
+        <div class="stat">
+            <span>♻️</span>
+            <h2>Reduce</h2>
+            <p>Waste production</p>
+        </div>
+
+        <div class="stat">
+            <span>💧</span>
+            <h2>Save</h2>
+            <p>Water resources</p>
+        </div>
+
+        <div class="stat">
+            <span>⚡</span>
+            <h2>Conserve</h2>
+            <p>Energy</p>
+        </div>
+
+        <div class="stat">
+            <span>🌳</span>
+            <h2>Protect</h2>
+            <p>Our environment</p>
+        </div>
+
+    </section>
+
+
+    <!-- Carbon Calculator -->
+    <section id="calculator" class="section">
+
+        <div class="section-heading">
+            <span class="section-label">🌍 ENVIRONMENTAL IMPACT</span>
+
+            <h2>Carbon Footprint Calculator</h2>
+
+            <p>
+                Enter your daily activities and get an approximate estimate
+                of your monthly carbon footprint.
+            </p>
+        </div>
+
+
+        <div class="calculator">
+
+            <div class="input-group">
+                <label>🚗 Car travel per day (km)</label>
+                <input type="number" id="carKm" placeholder="Example: 20" min="0">
+            </div>
+
+            <div class="input-group">
+                <label>⚡ Electricity usage per month (kWh)</label>
+                <input type="number" id="electricity" placeholder="Example: 100" min="0">
+            </div>
+
+            <div class="input-group">
+                <label>✈️ Flights per year</label>
+                <input type="number" id="flights" placeholder="Example: 2" min="0">
+            </div>
+
+            <button class="btn primary calculate-btn" onclick="calculateCarbon()">
+                Calculate Footprint
+            </button>
+
+            <div id="carbonResult" class="result">
+                Your result will appear here.
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Waste Guide -->
+    <section id="waste" class="section alternate">
+
+        <div class="section-heading">
+            <span class="section-label">♻️ WASTE MANAGEMENT</span>
+
+            <h2>Know Your Waste</h2>
+
+            <p>
+                Proper waste segregation helps recycling and reduces pollution.
+            </p>
+        </div>
+
+
+        <div class="waste-grid">
+
+            <div class="waste-card">
+                <div class="waste-icon">🥬</div>
+                <h3>Organic Waste</h3>
+                <p>
+                    Food scraps, vegetables, fruits and garden waste.
+                </p>
+                <span class="waste-tag organic">Compostable</span>
+            </div>
+
+            <div class="waste-card">
+                <div class="waste-icon">📦</div>
+                <h3>Paper & Cardboard</h3>
+                <p>
+                    Newspapers, cardboard boxes and clean paper products.
+                </p>
+                <span class="waste-tag recyclable">Recyclable</span>
+            </div>
+
+            <div class="waste-card">
+                <div class="waste-icon">🥤</div>
+                <h3>Plastic</h3>
+                <p>
+                    Bottles, containers and other recyclable plastic materials.
+                </p>
+                <span class="waste-tag recyclable">Recycle</span>
+            </div>
+
+            <div class="waste-card">
+                <div class="waste-icon">🔋</div>
+                <h3>E-Waste</h3>
+                <p>
+                    Batteries, phones, computers and electronic equipment.
+                </p>
+                <span class="waste-tag danger">Special Disposal</span>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Green Tips -->
+    <section id="tips" class="section">
+
+        <div class="section-heading">
+            <span class="section-label">🌱 DAILY ACTIONS</span>
+
+            <h2>Simple Green Tips</h2>
+
+            <p>
+                Small changes in our daily habits can create a meaningful impact.
+            </p>
+        </div>
+
+
+        <div class="tips-grid">
+
+            <div class="tip-card">
+                <span>💡</span>
+                <h3>Save Electricity</h3>
+                <p>
+                    Turn off lights, fans and appliances when they are not needed.
+                </p>
+            </div>
+
+            <div class="tip-card">
+                <span>🚰</span>
+                <h3>Save Water</h3>
+                <p>
+                    Fix leaking taps and avoid wasting water while brushing.
+                </p>
+            </div>
+
+            <div class="tip-card">
+                <span>🛍️</span>
+                <h3>Avoid Single-Use Plastic</h3>
+                <p>
+                    Carry reusable bags and bottles whenever possible.
+                </p>
+            </div>
+
+            <div class="tip-card">
+                <span>🚲</span>
+                <h3>Choose Green Transport</h3>
+                <p>
+                    Walk, cycle or use public transport for shorter journeys.
+                </p>
+            </div>
+
+            <div class="tip-card">
+                <span>🌳</span>
+                <h3>Plant Trees</h3>
+                <p>
+                    Support tree planting and protect existing green spaces.
+                </p>
+            </div>
+
+            <div class="tip-card">
+                <span>🥗</span>
+                <h3>Reduce Food Waste</h3>
+                <p>
+                    Plan meals and store food properly to avoid unnecessary waste.
+                </p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Challenges -->
+    <section id="challenges" class="section alternate">
+
+        <div class="section-heading">
+            <span class="section-label">🏆 ECO CHALLENGES</span>
+
+            <h2>Take the Challenge</h2>
+
+            <p>
+                Complete simple environmental actions and build your Green Score.
+            </p>
+        </div>
+
+
+        <div class="challenge-grid">
+
+            <div class="challenge-card">
+                <div class="challenge-top">
+                    <span>🚰</span>
+                    <strong>+50 Points</strong>
+                </div>
+
+                <h3>Save Water Today</h3>
+
+                <p>
+                    Take shorter showers and close taps when not required.
+                </p>
+
+                <button onclick="completeChallenge(this, 50)">
+                    Complete Challenge
+                </button>
+            </div>
+
+
+            <div class="challenge-card">
+                <div class="challenge-top">
+                    <span>🛍️</span>
+                    <strong>+75 Points</strong>
+                </div>
+
+                <h3>No Plastic Bags</h3>
+
+                <p>
+                    Avoid single-use plastic bags for an entire day.
+                </p>
+
+                <button onclick="completeChallenge(this, 75)">
+                    Complete Challenge
+                </button>
+            </div>
+
+
+            <div class="challenge-card">
+                <div class="challenge-top">
+                    <span>🚲</span>
+                    <strong>+100 Points</strong>
+                </div>
+
+                <h3>Green Transport</h3>
+
+                <p>
+                    Walk, cycle or use public transport instead of a car.
+                </p>
+
+                <button onclick="completeChallenge(this, 100)">
+                    Complete Challenge
+                </button>
+            </div>
+
+
+            <div class="challenge-card">
+                <div class="challenge-top">
+                    <span>♻️</span>
+                    <strong>+80 Points</strong>
+                </div>
+
+                <h3>Sort Your Waste</h3>
+
+                <p>
+                    Separate recyclable and organic waste correctly.
+                </p>
+
+                <button onclick="completeChallenge(this, 80)">
+                    Complete Challenge
+                </button>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Green Score -->
+    <section class="score-section">
+
+        <div class="score-content">
+
+            <span class="section-label">🌱 YOUR PROGRESS</span>
+
+            <h2>Your Green Score</h2>
+
+            <p>
+                Complete eco-friendly challenges to improve your environmental score.
+            </p>
+
+            <div class="score-box">
+                <span id="score">0</span>
+                <small>POINTS</small>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- Footer -->
+    <footer>
+
+        <div class="footer-logo">
+            🌱 EcoLife
+        </div>
+
+        <p>
+            Green & Clean Technology — Building a cleaner future together.
+        </p>
+
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#calculator">Calculator</a>
+            <a href="#waste">Waste Guide</a>
+            <a href="#tips">Tips</a>
+        </div>
+
+        <p class="copyright">
+            © 2026 EcoLife. CSP Project.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
